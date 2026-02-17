@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+@layer components {
+  .choiceButton {
+    @apply bg-blue-500 m-0.5 p-1 font-bold text-amber-50 rounded-lg duration-100;
+    @apply hover:cursor-pointer hover:bg-blue-400;
+  }
+}
