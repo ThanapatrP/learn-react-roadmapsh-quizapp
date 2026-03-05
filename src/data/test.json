@@ -1,11 +1,14 @@
 {
-  "name": "John Doe",
-  "age": 30,
-  "isStudent": false,
-  "hobbies": ["reading", "hiking", "gaming"],
-  "address": {
-    "street": "123 Main St",
-    "city": "Anytown",
-    "zip": "12345"
-  }
+  "questions": [
+    {
+      "title": "test",
+      "choices": ["A", "B", "C", "D"],
+      "answer": 1
+    },
+    {
+      "title": "test2",
+      "choices": ["1", "2", "3", "4", "5", "6", "7"],
+      "answer": 3
+    }
+  ]
 }

@@ -1,30 +1,35 @@
 import { useState, useEffect } from "react";
+import { type Question } from "../types/Question";
+
 import "./QuizCard.css";
 
-function QuizCard() {
-  const [data, setData] = useState();
+interface QuizCardProp {
+  question: Question;
+  i: number;
+}
 
-  useEffect(() => {
-    fetch('/src/data/test.json')
-      .then(response => response.json())
-      .then(data => setData(data.name))
-      .catch(error => console.error("Error fetching data:", error));
-  }, []);
+function QuizCard({ question, i }: QuizCardProp) {
+  const onChoose = (choiceIndex: number) => {
+    if (choiceIndex == question.answer) {
+      console.log("yay", choiceIndex);
+    } else {
+      console.log("NOOO", choiceIndex);
+    }
+  };
 
   return (
     <div className="m-3 p-3 bg-white rounded-xl">
       <div className="mb-2 ">
-        <h2 className="text-sm underline decoration-1">Question #1</h2>
-        <h1 className="text-xl font-bold text-blue-700">?????</h1>
-        <p>
-          {data}
-        </p>
+        <h2 className="text-sm underline decoration-1">Question: #{i}</h2>
+        <h1 className="text-xl font-bold text-blue-700">{question.title}</h1>
+        <p></p>
       </div>
       <div className="grid grid-cols-2">
-        <button className="choiceButton">A</button>
-        <button className="choiceButton">B</button>
-        <button className="choiceButton">C</button>
-        <button className="choiceButton">D</button>
+        {question.choices.map((c, j) => (
+          <button key={j} className="choiceButton" onClick={() => onChoose(j)}>
+            {c}
+          </button>
+        ))}
       </div>
     </div>
   );
