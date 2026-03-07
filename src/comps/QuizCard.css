@@ -5,4 +5,20 @@
     @apply bg-blue-500 m-0.5 p-1 font-bold text-amber-50 rounded-lg duration-100;
     @apply hover:cursor-pointer hover:bg-blue-400;
   }
+  .choiceButton-correct {
+    @apply bg-green-500 m-0.5 p-1 font-bold text-amber-50 rounded-lg duration-100;
+    @apply hover:cursor-pointer hover:bg-green-400;
+  }
+  .choiceButton-incorrect {
+    @apply bg-red-500 m-0.5 p-1 font-bold text-amber-50 rounded-lg duration-100;
+    @apply hover:cursor-pointer hover:bg-red-400;
+  }
+  .choiceButton-answer {
+    @apply bg-green-500 m-0.5 p-1 font-bold text-amber-50 rounded-lg duration-100;
+    @apply hover:cursor-pointer hover:bg-green-400;
+  }
+  .choiceButton-disabled {
+    @apply bg-gray-500 m-0.5 p-1 font-bold text-amber-50 rounded-lg duration-100;
+    @apply hover:cursor-pointer hover:bg-gray-400;
+  }
 }

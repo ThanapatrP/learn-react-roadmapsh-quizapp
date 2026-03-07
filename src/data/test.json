@@ -1,14 +1,19 @@
 {
   "questions": [
     {
-      "title": "test",
-      "choices": ["A", "B", "C", "D"],
-      "answer": 1
+      "title": "Choose \"Red.\"",
+      "choices": ["Blue", "Green", "Red", "Rainbow"],
+      "answer": 2
     },
     {
-      "title": "test2",
-      "choices": ["1", "2", "3", "4", "5", "6", "7"],
-      "answer": 3
+      "title": "What framework is used in this app.",
+      "choices": ["React", "Vue.js"],
+      "answer": 0
+    },
+    {
+      "title": "What is 9*9",
+      "choices": ["20", "10", "82", "90", "90-9", "91", "100"],
+      "answer": 4
     }
   ]
 }
